@@ -17,9 +17,11 @@ exports.handler = function (event, contex, callback) {
             ecsService = ecsService2;
         }
         for (var m = 0; m < ecsService.length; m++) {
-            /*console.log('ecsService:' ,ecsService);
-            console.log('ecsCluster: '+ecsCluster[i]);
-            console.log('ecsService: '+[ecsService[m]]);*/
+            console.log('ecsService: '+ ecsService);
+            console.log('ecsCluster: '+ ecsCluster[i]);
+            console.log('ecsService: '+ [ecsService[m]]);
+            console.log('ecsService: '+ ecsService[m]);
+            console.log('ecsService: '+ [ecsService]);
             console.log('---------');
             var ecs = new aws.ECS({ region: ecsRegion });
             ecs.describeServices({ services: [ecsService[m]], cluster: ecsCluster[i] }, function (err, data) {
