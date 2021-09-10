@@ -36,14 +36,14 @@ exports.handler = function (event, contex, callback) {
                             service: ecsService[m],
                             desiredCount: maxCount
                         };
-                        ecs.updateService(params, function (err, data) {
+                       /* ecs.updateService(params, function (err, data) { //ecs.updateService MissingRequiredParameter: Missing required key 'service' in params
                             if (err) {
                                 console.log(err, err.stack);
                             } else {
                                 console.log(data);
                             }
                         });
-                        //console.log(params);
+                       */
                     }
                     else {
                         console.log('mevcutta maximum countta, guncellenmedi!');
